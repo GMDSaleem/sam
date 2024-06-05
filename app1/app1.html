@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App 1</title>
+    <link rel="stylesheet" href="app1.css">
+</head>
+<body>
+    <button class="back-button" onclick="window.location.href='../index.html'">Back</button>
+    <div class="container">
+        <h1>App 1</h1>
+        <div class="dropdowns">
+            <div class="dropdown">
+                <label for="category"><strong>Category:</strong></label>
+                <select id="category" onchange="updateSubcategory()">
+                    <option value="" selected disabled>Select Category</option>
+                    <option value="p">P Data</option>
+                    <option value="n">N Data</option>
+                    <option value="c">C Data</option>
+                    <option value="f">F Data</option>
+                </select>
+            </div>
+            <div class="dropdown">
+                <label for="subcategory"><strong>Subcategory:</strong></label>
+                <select id="subcategory" onchange="calculateResult()">
+                    <option value="" selected disabled>Select Subcategory</option>
+                </select>
+            </div>
+            <div class="dropdown">
+                <label for="securities"><strong>Securities:</strong></label>
+                <select id="securities" onchange="calculateResult()">
+                    <option value="" selected disabled>Select Securities</option>
+                    <option value="100">100</option>
+                    <option value="100-200">100 to 200</option>
+                    <option value="200+">Above 200</option>
+                </select>
+            </div>
+            <div class="dropdown">
+                <label for="users"><strong>Users:</strong></label>
+                <select id="users" onchange="calculateResult()">
+                    <option value="" selected disabled>Select Users</option>
+                    <option value="1.00">1000</option>
+                    <option value="1.44">2000</option>
+                    <option value="2.10">3000</option>
+                    <option value="2.72">4000</option>
+                </select>
+            </div>
+        </div>
+        <div id="result" class="result-box">
+            <h2><strong>Result:</strong> <span id="result-value">0</span></h2>
+        </div>
+    </div>
+    <script src="app1.js"></script>
+</body>
+</html>
